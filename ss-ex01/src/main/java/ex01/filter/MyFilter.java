@@ -12,7 +12,7 @@ import java.io.IOException;
 public class MyFilter extends GenericFilterBean {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-    	Cookie cookie = new Cookie("MyFilter", "Works");
+    	Cookie cookie = new Cookie("MyFilter", "Works");   // cookie name / cookie value
         cookie.setPath(((HttpServletRequest)request).getContextPath());
         cookie.setMaxAge(60);
         ((HttpServletResponse)response).addCookie(cookie);
